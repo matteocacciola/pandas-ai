@@ -172,8 +172,10 @@ df = pai.DataFrame({
 })
 
 # Configure the LLM
-pai.config.set("temperature", 0)
-pai.config.set("seed", 26)
+pai.config.set({
+   "temperature" : 0,
+   "seed" : 26
+})
 
 df.chat('Which are the 5 happiest countries?') # answer should me (mostly) consistent across devices.
 ```

@@ -82,7 +82,7 @@ You can also ask PandasAI to generate charts for you:
 
 ```python
 df.chat(
-    "Plot the histogram of countries showing for each one the gd. Use different colors for each bar",
+    "Plot the histogram of countries showing for each one the gdp. Use different colors for each bar",
 )
 ```
 

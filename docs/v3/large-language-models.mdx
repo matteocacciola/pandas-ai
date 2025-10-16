@@ -3,11 +3,6 @@ title: "Set up LLM"
 description: "Set up Large Language Model in PandasAI"
 ---
 
-<Note title="Beta Notice">
-  Release v3 is currently in beta. This documentation reflects the features and
-  functionality in progress and may change before the final release.
-</Note>
-
 PandasAI supports multiple LLMs.
 You need to install the corresponding LLM extension.
 Once an LLM extension is installed, you can configure it using [`pai.config.set()`](/v3/overview-nl#configure-the-nl-layer).
@@ -177,8 +172,10 @@ df = pai.DataFrame({
 })
 
 # Configure the LLM
-pai.config.set("temperature", 0)
-pai.config.set("seed", 26)
+pai.config.set({
+   "temperature" : 0,
+   "seed" : 26
+})
 
 df.chat('Which are the 5 happiest countries?') # answer should me (mostly) consistent across devices.
 ```
